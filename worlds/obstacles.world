@@ -658,10 +658,10 @@
       <pose>3.49843 4.47715 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>229 52000000</sim_time>
-      <real_time>230 937113350</real_time>
-      <wall_time>1715575538 174910697</wall_time>
-      <iterations>229052</iterations>
+      <sim_time>247 253000000</sim_time>
+      <real_time>249 304411142</real_time>
+      <wall_time>1715575556 542208639</wall_time>
+      <iterations>247253</iterations>
       <model name='cube_20k'>
         <pose>1.84886 -2.79155 -0 -0 1e-06 -7e-06</pose>
         <scale>1 1 1</scale>
