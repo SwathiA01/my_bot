@@ -1,19 +1,291 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-    <joint name="laser_joint" type="fixed">
+
+
+<!-- Support Cylinders -->
+
+    <joint name="support_cylinder_1_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_1"/>
+        <origin xyz="${chassis_length - 0.02} ${chassis_width/2 - 0.02} ${chassis_height}"/>
+    </joint>
+
+    <link name="support_cylinder_1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.2"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.2"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+     <joint name="support_cylinder_2_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_2"/>
+        <origin xyz="${0.02} ${chassis_width/2 - 0.02} ${chassis_height}"/>
+    </joint>
+
+    <link name="support_cylinder_2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.2"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.2"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+     <joint name="support_cylinder_3_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_3"/>
+        <origin xyz="${chassis_length - 0.02} ${-chassis_width/2 + 0.02} ${chassis_height}"/>
+    </joint>
+
+    <link name="support_cylinder_3">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.2"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.2"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+     <joint name="support_cylinder_4_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_4"/>
+        <origin xyz="${ 0.02} ${-chassis_width/2 + 0.02} ${chassis_height}"/>
+    </joint>
+
+    <link name="support_cylinder_4">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.2"/>
+            </geometry>
+            <material name="green"/>        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.2"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+    <!-- Tray -->
+
+    <joint name="tray_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="tray"/>
+        <origin xyz="${chassis_length /2} 0 ${chassis_height + 0.1}"/>
+    </joint>
+
+    <link name="tray">
+        <visual>
+            <geometry>
+                <box size="${chassis_length} ${chassis_width} 0.02"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <box size="${chassis_length} ${chassis_width} 0.02"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0002" ixy="0.0" ixz="0.0" iyy="0.0002" iyz="0.0" izz="0.0002"/>
+        </inertial>
+    </link>
+
+    <!-- Support Cylinders -->
+
+    <joint name="support_cylinder_5_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_5"/>
+        <origin xyz="${chassis_length - 0.02} ${chassis_width/2 - 0.02} ${chassis_height + 0.12}"/>
+    </joint>
+
+    <link name="support_cylinder_5">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.3"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.3"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+     <joint name="support_cylinder_6_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_6"/>
+        <origin xyz="${0.02} ${chassis_width/2 - 0.02} ${chassis_height + 0.12}"/>
+    </joint>
+
+    <link name="support_cylinder_6">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.3"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.3"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+     <joint name="support_cylinder_7_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_7"/>
+        <origin xyz="${chassis_length - 0.02} ${-chassis_width/2 + 0.02} ${chassis_height + 0.12}"/>
+    </joint>
+
+    <link name="support_cylinder_7">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.3"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.3"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+     <joint name="support_cylinder_8_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="support_cylinder_8"/>
+        <origin xyz="${ 0.02} ${-chassis_width/2 + 0.02} ${chassis_height + 0.12}"/>
+    </joint>
+
+    <link name="support_cylinder_8">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.3"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.02" length="0.3"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.1"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+    
+<!-- Top Tray -->
+
+    <joint name="top_tray_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="top_tray"/>
+        <origin xyz="${chassis_length / 2} 0 ${chassis_height + 0.12 + 0.15}"/>
+    </joint>
+
+    <link name="top_tray">
+        <visual>
+            <geometry>
+                <box size="${chassis_length} ${chassis_width} 0.02"/>
+            </geometry>
+            <material name="green"/>
+                    </visual>
+        <collision>
+            <geometry>
+                <box size="${chassis_length} ${chassis_width} 0.02"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="0.2"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.0002" ixy="0.0" ixz="0.0" iyy="0.0002" iyz="0.0" izz="0.0002"/>
+        </inertial>
+    </link>
+
+
+
+   
+
+
+    <!-- LIDAR -->
+
+
+
+  <joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
         <child link="laser_frame"/>
-        <origin xyz="0.1 0 0.175" rpy="0 0 0"/>
+        <origin xyz="0.122 0 0.212" rpy="0 0 0"/>
     </joint>
 
     <link name="laser_frame">
         <visual>
+                 <origin xyz="0 0 0.2"/>
+
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
             </geometry>
-            <material name="red"/>
+            <material name="black"/>
         </visual>
+       
         <collision>
             <geometry>
                 <cylinder radius="0.05" length="0.04"/>
@@ -23,6 +295,7 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
 
 
 
